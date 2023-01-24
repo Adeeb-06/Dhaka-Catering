@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+  /* background-image: url('image.jpg'); */
+  background-size: cover;
+  background: black;
+}
+
+.typing-container {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#typing-text {
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 3.5s steps(50, end), blink .75s step-end infinite;
+}
+
+@keyframes type {
+  from { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+</style>
+<body>
+    <div class="typing-container">
+    <p id="typing-text"></p>
+  </div>
+</body>
+<script>
+    const texts = [  "Welcome to Dhaka Catering!",  "We offer a variety of delicious dishes",  "All made with the finest ingredients",  "Thank you for choosing us!"];
+const speed = 75;
+
+let i = 0;
+let j = 0;
+let typingText = document.getElementById("typing-text");
+
+function type() {
+  if (i < texts[j].length) {
+    typingText.innerHTML += texts[j].charAt(i);
+    i++;
+    setTimeout(type, speed);
+  } else {
+    setTimeout(erase, speed);
+  }
+}
+
+function erase() {
+  if (i > 0) {
+    typingText.innerHTML = texts[j].substring(0, i-1);
+    i--;
+    setTimeout(erase, speed);
+  } else {
+    j++;
+    if (j >= texts.length) j = 0;
+    setTimeout(type, speed);
+  }
+}
+
+type();
+
+
+</script>
+</html>
+  

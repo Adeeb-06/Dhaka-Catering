@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+/* body {
+  
+} */
+.bg {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("img/kachi.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  position: relative;
+  top: -80px;
+  /* transition: 0.7s ease-in; */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.bg h2 {
+  font-size: 30px;
+  color: aliceblue;
+}
+nav {
+  height: 80px;
+  transition: 0.7s ease;
+}
+nav.sticky {
+  height: 80px;
+  background: black;
+  position: fixed;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  bottom: 141px;
+  left: -17px;
+}
+nav ul li {
+  font-size: 27px;
+  list-style: none;
+  color: aliceblue;
+  margin: 31px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+nav ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: rgba(147, 13, 9, 0.897);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+nav ul li:hover:after {
+  width: 100%;
+}
+.logo {
+  height: 98px;
+  /* padding-left: 14px; */
+  margin: 11px;
+  position: relative;
+  z-index: 6;
+  position: relative;
+  right: -1136px;
+}
+.social {
+  position: relative;
+  bottom: -507px;
+  z-index: 7;
+  display: flex;
+  margin: 3px;
+  left: -157px;
+}
+.facebook i {
+  height: 10px;
+  /* background: url("./img/facebook.png"); */
+  position: relative;
+  left: 1050px;
+
+  bottom: 151px;
+  color: aliceblue;
+}
+.insta i {
+  font-size: 27px;
+  position: relative;
+  color: aliceblue;
+  z-index: 7;
+  left: -29px;
+}
+.tet i {
+  font-size: 27px;
+  position: relative;
+  color: aliceblue;
+  z-index: 9;
+}
+#typing-text {
+  font-size: 58px;
+  font-weight: bold;
+  color: white;
+  overflow: hidden;
+  font-family: "Rubik", sans-serif;
+  animation: type 3.5s steps(50, end), blink 0.75s step-end infinite;
+  padding: 0 72px 0 53px;
+  top: 227px;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  left: 158px;
+  transition: 0.7s;
+}
+#typing-text.active {
+  left: 361px;
+  font-size: 49px;
+  padding: 0 43px 0 38px;
+}
+.navpop {
+  display: none;
+  transition: 0.7s;
+}
+.navpop.active {
+  transition: ease 0.5s;
+  height: 102vh;
+  z-index: 3;
+  width: 56vh;
+  display: flex;
+  
+  position: relative;
+  top: -237px;
+
+  background: black;
+  animation-name: slideinnav;
+  /* animation: slideinnav 0.5s ease-in; */
+
+}
+.navpop.active ul {
+  flex-direction: column;
+  flex-direction: column;
+  top: 2px;
+  background: black;
+  line-height: 45px;
+  text-align: center;
+  margin: 8px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  animation: delay 0.7s 0.8s;
+}
+.bg.active {
+  height: 100vh;
+  width: 952px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+  url("img/kachi.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  top: -80px;
+  position: relative;
+  left: 328px;
+}
+.navpop.active ul li {
+}
+@media screen and (max-width: 412px) {
+  #typing-text {
+    font-size: 56px;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    font-family: "Rubik", sans-serif;
+    animation: type 3.5s steps(50, end), blink 0.75s step-end infinite;
+    padding: 0 32px 0 23px;
+    top: 170px;
+    position: absolute;
+    line-height: 71px;
+    left: 10px;
+    text-align: none;
+  }
+  
+  .h {
+    display: none;
+  }
+  .social {
+    /* display: none; */
+    position: relative;
+    z-index: 7;
+  }
+  nav ul {
+    display: none;
+  }
+  ul.active {
+    width: 50%;
+    background: red;
+  }
+}
+@media screen and (max-width: 810px) {
+  #typing-text {
+    padding: 0 38px 0 23px;
+    top: 234px;
+    position: absolute;
+    line-height: 71px;
+    left: 19px;
+    text-align: none;
+    font-size: 50px;
+  }
+  .h {
+    display: none;
+  }
+  /* nav ul li {
+    font-size: 21px;
+    list-style: none;
+    color: aliceblue;
+    margin: 21px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    bottom: -18px;
+    position: relative;
+  }
+  .logo {
+    height: 73px;
+    padding-top: 2px;
+  }
+  .social {
+    top: 63px;
+    left: -402px;
+  }
+  .facebook i {
+    font-size: 25px;
+    position: relative;
+    left: 1050px;
+    bottom: 152px;
+    color: aliceblue;
+  }
+  .insta i {
+    position: relative;
+    left: 1105px;
+    bottom: 180px;
+    color: aliceblue;
+  }
+  .tet i {
+    font-size: 25px;
+    position: relative;
+    left: 1161px;
+    bottom: 209px;
+    color: aliceblue;
+  } */
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.h {
+  position: absolute;
+  top: 297px;
+  padding: 2px;
+  background: #fff;
+  width: 652px;
+  transition: 0.7s;
+  left: 294px;
+  border-radius: 5px;
+}
+.h.active {
+  left: 467px;
+  width: 511px;
+}
+
+.get {
+  position: relative;
+  left: 44%;
+  bottom: 289px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 82px;
+  width: 164px;
+  height: 65px;
+  outline: none;
+  border: none;
+  background-color: rgba(147, 13, 9, 0.897);
+  font-size: 22px;
+  transition: 0.6s;
+}
+.get.active {
+  bottom: 289px;
+  left: 50%;
+}
+.get a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.get:hover {
+  opacity: 0.7;
+}
+.get.hover {
+  width: 175px;
+}
+.get.inhover {
+  width: 164px;
+}
+.menu-bar i {
+  color: #fff;
+  font-size: 90px;
+  position: relative;
+  padding-left: 27px;
+  bottom: 16px;
+  cursor: pointer;
+  z-index: 5;
+}
+@keyframes slideinnav {
+  from {
+    width: 26vh;
+  }
+  to {
+    width: 59vh;
+  }
+}
+@keyframes delay {
+  from {
+    display: none;
+  }
+  to {
+    display: flex;
+  }
+}
